@@ -1,4 +1,4 @@
-name: Build Windows Mini Floating
+name: Build Windows Mini 32-bit
 
 on:
   push:
@@ -7,23 +7,24 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v5  # update ke v5
 
-      - name: Setup Node
-        uses: actions/setup-node@v5  # update ke v5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
         with:
           node-version: 24
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: Build Installer
+      - name: Build installer (32-bit)
         run: npm run build
 
-      - name: Upload Installer
+      - name: Upload Windows Installer
         uses: actions/upload-artifact@v4
         with:
-          name: mileboard-mini-floating
+          name: mileboard-mini-ia32
           path: dist/*.exe
