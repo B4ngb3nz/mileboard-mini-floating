@@ -13,6 +13,10 @@
   "build": {
     "appId": "com.mile.board.mini",
     "productName": "Mile Board Mini Floating",
+    "directories": { "output": "dist" },
+    "win": { "target": "nsis", "icon": "icon.ico" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true },
+    "publish": null
     "win": {
       "target": "nsis",
       "icon": "icon.ico"
