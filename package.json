@@ -16,7 +16,7 @@
     "directories": { "output": "dist" },
     "win": { "target": "nsis", "icon": "icon.ico" },
     "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true },
-    "publish": null
+    "publish": null ,
     "win": {
       "target": "nsis",
       "icon": "icon.ico"
