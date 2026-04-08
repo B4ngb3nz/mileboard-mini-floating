@@ -17,14 +17,19 @@
     "win": { "target": "nsis", "icon": "icon.ico" },
     "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true },
     "publish": null ,
-    "win": {
-      "target": ["nsis", "ia32"],
-      "icon": "icon.ico"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "runAfterFinish": true
-    }
+   "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["ia32"]
+      }
+    ],
+    "icon": "icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "runAfterFinish": true
+  }
   }
 }
